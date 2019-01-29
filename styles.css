@@ -95,7 +95,7 @@ footer, section.instagram {
 
 /* ========== HEADER STYLING ========== */
 header {
-	background-image: url(assets/home/image-1.jpg);
+	background-image: url(assets/home/headerImage1x.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -156,11 +156,11 @@ main .button {
 }
 
 .about .bkgImage {
-	background-image: url(assets/home/image-2_2.jpg);
+	background-image: url(assets/home/aboutImage1x.jpg);
 }
 
 .mission .bkgImage {
-	background-image: url(assets/home/paolo-nicolello-512467-unsplash.jpg);
+	background-image: url(assets/home/missionImage1x.jpg);
 }
 
 .mission .bkgImage, .mission .textBox {
@@ -200,7 +200,7 @@ main .button {
 }
 
 .services {
-	background-image: url(assets/home/image-5.jpg);
+	background-image: url(assets/home/servicesBkg1x.jpg);
 	text-align: center; 
 }
 
