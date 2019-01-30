@@ -7,6 +7,19 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+.skipLink {
+	position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skipLink:focus {
+    left: 0;
+}
+
 /* ========== GENERAL STYLING ========== */
 
 html {
@@ -34,13 +47,13 @@ h1, h3 {
 }
 
 h1 {
-	font-size: 6rem;
+	font-size: 5em;
 	text-align: center;
 	margin-top: 12%;
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 2.6em;
 	color: #000000;
 }
 
@@ -76,8 +89,8 @@ img {
 	height: 100%;
 }
 
-footer, section.instagram {
-	padding: 50px 100px;
+.textBox, .testimonial, footer, .instagram {
+	padding: 5%;
 }
 
 .button {
@@ -88,10 +101,6 @@ footer, section.instagram {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-
-/* h2.titleMedium {
-	display: none;
-} */
 
 /* ========== HEADER STYLING ========== */
 header {
@@ -104,14 +113,14 @@ header {
 	max-height: 750px;
 }
 
-.dropMenu {
+.dropMenu, .dropMenu li {
 	display: none;
 }
 
 .social {
 	position: absolute;
-	right: 50px;
-	top: 6%;	
+	right: 40px;
+	top: 5%;	
 }
 
 .social i {
@@ -136,17 +145,13 @@ main .button {
 	height: 100%;
 }
 
- .textBox {
-	 width: 50%;
- }
+.textBox {
+	width: 50%;
+	font-size: 1em;
+}
 
 .about .bkgImage, .about .textBox {
 	float: right;
-}
-
-.textBox {
-	padding: 75px 100px;
-	font-size: 1em;
 }
 
 .bkgImage, .services {
@@ -171,14 +176,11 @@ main .button {
 
 .testimonial {
 	background-color: #f4f4f4;
-	padding: 100px;
+	display: table;
 }
 
 .testimonial h2 {
-	display: inline-block;
-	position: relative;
-	left: 20px;
-	line-height: 3.475rem;
+	line-height: 4rem;
 }
 
 .testimonial p {
@@ -187,17 +189,19 @@ main .button {
 
 .testimonial .image {
 	width: 30%;
-}
-
-.testimonial .image, .testimonial .textBox {
-	float: left;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .testimonial .textBox {
 	width: 70%;
 	padding: 0 0 0 20px;
 	margin: 0;
+	display: table-cell;
+	vertical-align: middle;
 }
+
+/* ==========SERVICES STYLING========== */
 
 .services {
 	background-image: url(assets/home/servicesBkg1x.jpg);
@@ -207,8 +211,8 @@ main .button {
 .services div {
 	display: inline-block;
 	text-align: center;
-	margin: 0 50px;
-	font-size: 1.6rem;
+	margin: 0 5%;
+	font-size: 1.5em;
 	position: relative;
 	top: 40%;
 }
@@ -219,7 +223,7 @@ main .button {
 
 /* ==========INSTAGRAM GALLERY STYLING========== */
 
-section.instagram {
+.instagram {
 	text-align: center;
 }
 
@@ -282,6 +286,7 @@ footer button {
 	top: 0;
 	bottom: 0;
 	width: 35%;
+	min-width: 160px;
 	border: none;
 	color: #222222;
 	background: #f2a11c;
@@ -309,92 +314,276 @@ form input, form button {
 }
 
 
-/* ========== MEDIA QUERIES ========== */
+/* ========== RESPONSIVE ========== */
 
 @media (max-width: 1441px) {
 	body {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
+	}
+
+	.textBox p {
+		font-size: .9em;
+	}
+
+	.textBox, .testimonial, .instagram {
+		padding: 5%;
 	}
 }
 
-@media (max-width: 1281px) {
-	.textBox {
-		padding: 40px 100px;
-	}
-
-	.testimonial {
-		height: 90vh;
-		padding: 20px 100px;
-	}
-
-	.testimonial h2 {
-		display: block;
-		width: 100%;
-		text-align: center;
-		margin: 30px 0 50px;
-	}
-}
-
-@media (max-width: 1153px) {
+@media (max-width: 1201px) {
 	body {
 		font-size: 1rem;
 	}
-
-	h1 {
-		font-size: 5.5rem;
-		margin-top: 9%;
-	}
-	
-	h2 {
-		font-size: 2.4rem;
-	}
-	
-	.testimonial h2 {
-		margin: 10px 0 25px;
-	}
 	
 	.about, .mission, .services {
-		height: 75vh;
+		height: 85vh;
 	}
-
-	.textBox, .testimonial {
-		padding: 20px 75px;
-	}
-}
-
-@media (max-width: 1057px) {
-	.about, .mission, .services {
-	height: 90vh;
-	}
-
+	
 	h1 {
-		font-size: 5rem;
+		font-size: 4.4rem;
+		margin-top: 16%;
+	}
+	
+	.social {
+		top: 6%;
 	}
 
 	h2 {
 		font-size: 2rem;
 	}
+	
+	.about .textBox, .mission .textBox {
+		font-size: 1.2rem;
+	}
 
-	.testimonial h2 {
-		margin: 0 25px;
+	.textBox, .testimonial, .instagram {
+		padding: 3% 5%;
+	}
+	
+	.services div {
+		font-size: 1.4rem;
+		margin: 0 5%;
 	}
 }
 
-@media (max-width: 962px) {
-	body > * {
-		display: inline-block;
+@media (max-width: 800px) {
+	body {
+		font-size: 1.2rem;
 	}
 	
-	.clearfix {
+	header {
+		position: relative;
+	}
+	
+	h1 {
+		font-size: 3.6rem;
+	}
+	
+	header nav, .social {
+		display: none;
+	}
+	
+	.dropMenu {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 20px;
+		color: white;
+	}
+	
+	.bkgImage, .textBox, .testimonial, .services {
+		width: 100%;
 		float: none;
 	}
 
-	.wrapper {
-		max-width: 960px;
+	.bkgImage {
+		height: 60vh;
 	}
 
-	.textBox, .bkgImage {
-		width: 100%
+	.textBox, .testimonial {
+		padding: 20px 20px 40px;
+		text-align: center;
 	}
 
+	.testimonial .image, .testimonial .textBox {
+		display: inline-block;
+		width: 80%;
+	}
+
+	.testimonial .textBox p {
+		text-align: left;
+	}
+
+	.services {
+		height: 100vh;
+		padding-top: 50px;
+		text-align: center;
+	}
+
+	.services a {
+		display: inline-block;
+		margin-bottom: 20px;
+		width: 55%;
+	}
+
+	.instagram {
+		padding: 20px 0;
+	}
+
+	.gallery {
+		margin: 10px;
+		text-align: center;
+	}
+
+	.gallery .image {
+		width: calc(50% - 3.25px)
+	}
+
+	.gallery .image:last-of-type {
+		display: none;
+	}
+
+	footer {
+		padding: 6% 3%;
+		font-size: .8rem;
+	}
+
+	footer nav li {
+		margin: 1%;
+		padding: 5px;
+	}
+
+	footer div {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	form input, form button {
+		width: 95%;
+		float: none;
+	}
+
+	form input {
+		text-align: center;
+	}
+
+	form button {
+		position: initial;
+	}
+}
+
+@media (max-width: 401px) {
+	body {
+		font-size: .8rem;
+	}
+
+	h1 {
+		font-size: 3.2rem;
+	}
+
+	.bkgImage {
+		height: 40vh;
+	}
+
+}
+/* ==========DPI QUERIES========== */
+
+/* LANDSCAPE */
+
+@media (orientation: landscape), (-webkit-min-device-pixel-ratio: 2), 
+	(min-resolution: 192dpi) {
+		header {
+			background-image: url(assets/home/headerImage2x.jpg);
+		}
+		
+		.about .bkgImage {
+			background-image: url(assets/home/aboutImage2x.jpg);
+		}
+		
+		.mission .bkgImage {
+			background-image: url(assets/home/missionImage2x.jpg);
+		}
+		
+		.services {
+			background-image: url(assets/home/servicesBkg2x.jpg); 
+		}
+}
+
+@media (orientation: landscape), (-webkit-min-device-pixel-ratio: 3), 
+	(min-resolution: 400dpi) {
+		header {
+			background-image: url(assets/home/headerImage3x.jpg);
+		}
+		
+		.about .bkgImage {
+			background-image: url(assets/home/aboutImage3x.jpg);
+		}
+	
+		.mission .bkgImage {
+			background-image: url(assets/home/missionImage3x.jpg);
+		}
+		
+		.services {
+			background-image: url(assets/home/servicesBkg3x.jpg); 
+		}
+}
+
+/* PORTRAIT */
+
+@media (orientation: portrait) {
+		header {
+			background-image: url(assets/mobile/headerImageMobile1x.jpg);
+		}
+		
+		.about .bkgImage {
+			background-image: url(assets/mobile/aboutImageMobile1x.jpg);
+		}
+		
+		.mission .bkgImage {
+			background-image: url(assets/mobile/missionImageMobile1x.jpg);
+		}
+		
+		.services {
+			background-image: url(assets/mobile/servicesBkgMobile1x.jpg); 
+		}
+}
+
+@media (orientation: portrait), (-webkit-min-device-pixel-ratio: 2), 
+	(min-resolution: 192dpi) {
+		header {
+			background-image: url(assets/mobile/headerImageMobile2x.jpg);
+		}
+		
+		.about .bkgImage {
+			background-image: url(assets/mobile/aboutImageMobile2x.jpg);
+		}
+		
+		.mission .bkgImage {
+			background-image: url(assets/mobile/missionImageMobile2x.jpg);
+		}
+		
+		.services {
+			background-image: url(assets/mobile/servicesBkgMobile2x.jpg); 
+		}
+}
+
+@media  (orientation: portrait), (-webkit-min-device-pixel-ratio: 3), 
+	(min-resolution: 400dpi) {
+		header {
+			background-image: url(assets/mobile/headerImageMobile3x.jpg);
+		}
+		
+		.about .bkgImage {
+			background-image: url(assets/mobile/aboutImageMobile3x.jpg);
+		}
+	
+		.mission .bkgImage {
+			background-image: url(assets/mobile/missionImageMobile3x.jpg);
+		}
+		
+		.services {
+			background-image: url(assets/mobile/servicesBkgMobile3x.jpg); 
+		}
 }
