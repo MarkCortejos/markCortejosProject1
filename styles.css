@@ -492,7 +492,7 @@ form input, form button {
 
 /* LANDSCAPE */
 
-@media (orientation: landscape), (-webkit-min-device-pixel-ratio: 2), 
+/* @media (orientation: landscape), (-webkit-min-device-pixel-ratio: 2), 
 	(min-resolution: 192dpi) {
 		header {
 			background-image: url(assets/home/headerImage2x.jpg);
@@ -528,7 +528,7 @@ form input, form button {
 		.services {
 			background-image: url(assets/home/servicesBkg3x.jpg); 
 		}
-}
+} */
 
 /* PORTRAIT */
 
@@ -549,7 +549,7 @@ form input, form button {
 			background-image: url(assets/mobile/servicesBkgMobile1x.jpg); 
 		}
 }
-
+/* 
 @media (orientation: portrait), (-webkit-min-device-pixel-ratio: 2), 
 	(min-resolution: 192dpi) {
 		header {
@@ -586,4 +586,4 @@ form input, form button {
 		.services {
 			background-image: url(assets/mobile/servicesBkgMobile3x.jpg); 
 		}
-}
+} */
